@@ -1,0 +1,24 @@
+package testing;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+        public class Locators3_CreatenewFBAccount {
+
+	    public static void main(String[] args) {
+		
+        WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.facebook.com/");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//a[contains(text(),'Create new account')]")).click();
+		driver.findElement(By.name("firstname")).sendKeys("Pratima");
+		//driver.findElement(By.xpath("//input[@placeholder aria-label ='Surname']")).sendKeys("SHarma");
+		driver.findElement(By.name("lastname")).sendKeys("sharma");
+		
+
+
+	}
+
+}
